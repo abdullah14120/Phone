@@ -19,9 +19,13 @@ libphonenumberVersion = "9.0.35"
 #build
 app-build-compileSDKVersion = "36"
 app-build-targetSDK = "36"
-app-build-minimumSDK = "26"
+
+# --- تم التعديل هنا ليدعم أندرويد 5.1 ---
+app-build-minimumSDK = "22" 
+
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
+
 [libraries]
 #Compose
 compose-detekt = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektCompose" }
@@ -36,6 +40,7 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 indicator-fast-scroll = { module = "org.fossify:IndicatorFastScroll", version.ref = "indicatorFastScroll" }
 autofit-text-view = { module = "me.grantland:autofittextview", version.ref = "autofitTextView" }
 libphonenumber = { module = "com.googlecode.libphonenumber:libphonenumber", version.ref = "libphonenumberVersion" }
+
 [plugins]
 android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
